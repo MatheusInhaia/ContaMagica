@@ -1,3 +1,5 @@
+package sistema;
+
 import java.math.BigDecimal;
 
 public class ContaMagica {
