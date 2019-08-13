@@ -12,7 +12,7 @@ public class ContaMagica {
     public ContaMagica(String nome){
         this.cliente = nome;
         this.categorias = Categoria.Silver;
-        this.saldo = new BigDecimal(0);
+        this.saldo = new BigDecimal("0");
     }
     public String getNomeCliente(){
         return this.cliente;
@@ -60,13 +60,13 @@ public class ContaMagica {
     }
     public BigDecimal valorizaDeposito(){
         if(getStatus() == Categoria.Silver){
-            return new BigDecimal(1);
+            return new BigDecimal("1");
         }else
         if(getStatus() == Categoria.Gold){
-           return new BigDecimal(1.01);
+           return new BigDecimal("1.01");
         }else
         if(getStatus() == Categoria.Platinum){
-            return new BigDecimal(1.025);
+            return new BigDecimal("1.025");
         }
         return null;
     }

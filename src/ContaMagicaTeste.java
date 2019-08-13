@@ -24,7 +24,7 @@ public class ContaMagicaTeste {
     public void getSaldo(){
         ContaMagica conta = new ContaMagica("Matheus");
         conta.deposito(new BigDecimal(300));
-        assertEquals(new BigDecimal(300), conta.getSaldo());
+        assertEquals(new BigDecimal("300.00"), conta.getSaldo());
     }
 
     @Test
@@ -75,15 +75,15 @@ public class ContaMagicaTeste {
         ContaMagica conta = new ContaMagica("Matheus");
         conta.deposito(new BigDecimal(50000));
         conta.deposito(new BigDecimal(1000));
-        assertEquals(new BigDecimal(51010), conta.getSaldo());
+        assertEquals(new BigDecimal("51010.00"), conta.getSaldo());
     }
 
     @Test
     public void depositoPlatinum(){
         ContaMagica conta = new ContaMagica("Matheus");
-        conta.deposito(new BigDecimal(200000));
-        conta.deposito(new BigDecimal(1000));
-        assertEquals(new BigDecimal(201025), conta.getSaldo());
+        conta.deposito(new BigDecimal("200000.0000"));
+        conta.deposito(new BigDecimal("1000.0000"));
+        assertEquals(new BigDecimal("201025.0000000"), conta.getSaldo());
     }
 
     @Test
