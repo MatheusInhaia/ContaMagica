@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplicativo.OperecoesClienteController">
+<Pane fx:id="paneOperacoes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplicativo.OperecoesClienteController">
    <children>
       <Button fx:id="sacar" layoutX="86.0" layoutY="90.0" mnemonicParsing="false" onAction="#clicarSacar" text="sacar" />
       <Button fx:id="depositar" layoutX="249.0" layoutY="90.0" mnemonicParsing="false" onAction="#clicarDepositar" text="depositar" />

@@ -5,6 +5,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.stage.Stage;
 import sistema.ContaMagica;
 
@@ -13,6 +18,13 @@ public class Main extends Application {
     public static Stage primaryStage;
     public static Class thisClass;
     public static ContaMagica conta;
+
+    public static BackgroundImage setImagemFundo(){
+        Image img = new Image(thisClass.getResourceAsStream("fundoApp.jpg"));
+        BackgroundImage bgi = new BackgroundImage(img, BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+        return bgi;
+    }
+
 
 
     public Main(){

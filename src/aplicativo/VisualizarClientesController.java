@@ -6,11 +6,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.Pane;
 import sistema.CadastroContas;
 import sistema.ContaMagica;
 import sistema.ContaMagicaGenerica;
 
 import java.math.BigDecimal;
+
+import static aplicativo.Main.setImagemFundo;
 
 public class VisualizarClientesController {
 
@@ -21,6 +25,8 @@ public class VisualizarClientesController {
     public TableColumn<ContaMagica, BigDecimal> colunaSaldo;
 
     public Button voltar;
+
+    public Pane paneVisualizar;
 
     public Main main = new Main();
     public void clicarVoltar()throws Exception{
@@ -35,6 +41,8 @@ public class VisualizarClientesController {
     }
 
     public void initialize(){
+        paneVisualizar.setBackground(new Background(setImagemFundo()));
+        tabelaClientes.setBackground(new Background(setImagemFundo()));
         colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         colunaIdade.setCellValueFactory(new PropertyValueFactory<>("idade"));
         colunaCategoria.setCellValueFactory(new PropertyValueFactory<>("categoria"));

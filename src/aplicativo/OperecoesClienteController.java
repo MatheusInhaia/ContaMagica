@@ -4,12 +4,15 @@ package aplicativo;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.Pane;
 
 
 import javax.swing.*;
 import java.math.BigDecimal;
 
 import static aplicativo.Main.conta;
+import static aplicativo.Main.setImagemFundo;
 
 public class OperecoesClienteController {
 
@@ -20,12 +23,15 @@ public class OperecoesClienteController {
 
     public Label nomeCliente;
 
+    public Pane paneOperacoes;
+
 
     public Main main = new Main();
 
     @FXML
     public void initialize() {
         nomeCliente.setText(conta.getCliente().getNome());
+        paneOperacoes.setBackground(new Background(setImagemFundo()));
     }
 
 

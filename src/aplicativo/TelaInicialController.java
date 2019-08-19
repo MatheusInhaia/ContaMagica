@@ -2,16 +2,19 @@ package aplicativo;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import sistema.CadastroContas;
 
 import javax.swing.*;
 
 import static aplicativo.Main.conta;
+import static aplicativo.Main.setImagemFundo;
 
 
 public class TelaInicialController {
 
-
+    public Pane paneInicial;
     public Button cliente;
     public Button gerente;
 
@@ -21,6 +24,7 @@ public class TelaInicialController {
 
     @FXML
     public void initialize() {
+        paneInicial.setBackground(new Background(setImagemFundo()));
     }
 
     public void clicarCliente()throws Exception{

@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplicativo.CadastroContaController">
+<Pane fx:id="paneCadastro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplicativo.CadastroContaController">
    <children>
       <Button fx:id="cadastrar" layoutX="101.0" layoutY="162.0" mnemonicParsing="false" onAction="#clicarCadastrar" text="Cadastrar" />
       <Button fx:id="cancelar" layoutX="231.0" layoutY="162.0" mnemonicParsing="false" onAction="#clicarCancelar" text="Cancelar" />

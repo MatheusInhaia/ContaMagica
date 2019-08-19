@@ -2,6 +2,8 @@ package aplicativo;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.Pane;
 import sistema.CadastroContas;
 import sistema.Cliente;
 import sistema.ContaMagica;
@@ -10,6 +12,7 @@ import javax.swing.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static aplicativo.Main.setImagemFundo;
 import static sistema.CadastroContas.insereConta;
 import static sistema.CadastroContas.listarContas;
 
@@ -25,12 +28,15 @@ public class CadastroContaController {
     public TextField textFieldNome;
     public TextField textFieldIdade;
 
+    public Pane paneCadastro;
+
     public Main main = new Main();
 
 
 
     @FXML
     public void initialize() {
+        paneCadastro.setBackground(new Background(setImagemFundo()));
     }
 
     public void clicarCancelar()throws Exception{

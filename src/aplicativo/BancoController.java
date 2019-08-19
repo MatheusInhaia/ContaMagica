@@ -10,10 +10,13 @@ package aplicativo;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.Pane;
 
 
 import javax.swing.*;
 
+import static aplicativo.Main.setImagemFundo;
 import static sistema.CadastroContas.listarContas;
 import static sistema.CadastroContas.removeConta;
 
@@ -23,10 +26,12 @@ public class BancoController {
     public Button excluirConta;
     public Button vizualizarClientes;
     public Button voltar;
+    public Pane paneBanco;
     public Main main = new Main();
 
     @FXML
     public void initialize() {
+        paneBanco.setBackground(new Background(setImagemFundo()));
     }
     public void clicarCriarConta() throws Exception{
         main.loadScene("CadastroConta.fxml", "Cadastro de cliente");
