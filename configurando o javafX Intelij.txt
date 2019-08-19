@@ -1,0 +1,13 @@
+-instala o java SDK 12   -----https://openjfx.io/openjfx-docs/
+
+-instala o javaFx sdk 12
+- faz o dawnload
+- extrai o zip
+-vai no project Structure
+-adicionar biblioteca
+-encontra a pasta que voce extraiu
+-seleciona a pasta lib
+-e da ok
+
+-depois vai nas opções do run
+-e seta a VM ===== --module-path /path/to/javafx-sdk-12.0.2/lib (caminho da pasta onde esta a lib no pc) --add-modules javafx.controls,javafx.fxml
