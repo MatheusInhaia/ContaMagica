@@ -1,6 +1,7 @@
 package sistema;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 public class ContaMagica {
 
@@ -8,16 +9,16 @@ public class ContaMagica {
         Silver, Gold, Platinum;
     }
     private Categoria categorias;
-    private String cliente;
+    private Cliente cliente;
     private BigDecimal saldo;
 
-    public ContaMagica(String nome){
-        this.cliente = nome;
+    public ContaMagica(Cliente novoCliente){
+        this.cliente = novoCliente;
         this.categorias = Categoria.Silver;
         this.saldo = new BigDecimal("0");
     }
-    public String getNomeCliente(){
-        return this.cliente;
+    public Cliente getCliente(){
+        return cliente;
     }
     public BigDecimal getSaldo(){
         return this.saldo;
@@ -90,5 +91,14 @@ public class ContaMagica {
         }else{
             throw new IllegalArgumentException("valor excede o saldo");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "ContaMagica{" +
+                "categorias=" + categorias +
+                ", cliente=" + cliente +
+                ", saldo=" + saldo +
+                '}';
     }
 }
